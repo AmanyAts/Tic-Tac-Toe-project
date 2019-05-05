@@ -1,0 +1,46 @@
+.board{
+    width: 500px;
+    height: 400px;
+    /* border: 2px solid black; */
+    margin-left: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    
+    
+   
+    
+}
+.box{
+    border-bottom: 2px solid palevioletred;
+    border-right: 2px solid palevioletred;
+
+    width: 30%;
+    height:33%;
+      
+}
+.right{
+    border-right: 0;
+}
+.bottom{
+    border-bottom:0; 
+}
+h1{
+    margin-left: 40%;
+}
+.XandO{
+    /* text-align: center; */
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 10%; */
+}
+
+/* div .cross::after{
+    content:"x";
+    color:lightblue;
+  }
+  .circle{
+    content:"o";
+    color:pink;
+  } */
