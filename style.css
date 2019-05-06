@@ -1,15 +1,24 @@
+
+body{
+  background: #FFFAFA;
+}
 .board{
     width: 500px;
-    height: 400px;
+    height: 350px;
     /* border: 2px solid black; */
     margin-left: 30%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 3%;
-    
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        
     
    
     
+}
+button{
+    margin-top: 3%;
+    margin-left:45%;
 }
 .box{
     border-bottom: 2px solid palevioletred;
@@ -26,15 +35,31 @@
     border-bottom:0; 
 }
 h1{
-    margin-left: 40%;
+    color:#fff;
+    font-family: 'Sofia', cursive;
+
+    font-size:45px;
+    margin-bottom: 5%;
+    margin-left: 38%;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+    /* text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkslateblue; */
+
 }
 .XandO{
     /* text-align: center; */
     font-size: 80px;
     display: flex;
     justify-content: center;
+    font-family:"Walter Turncoat", cursive;
     /* margin-left: 10%; */
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      width:100%;
+    }
+  }
 
 /* div .cross::after{
     content:"x";
