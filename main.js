@@ -3,6 +3,7 @@ let player = 1;
 let x = "X";
 let o = "O";
 let isWin;
+
 function displayChar(event) {
   if (player == 1) {
     //draw x if player is 1
@@ -20,7 +21,7 @@ function displayChar(event) {
     isWin = FindWinner(event);
   }
 
-  //if (!isWin) {
+  if (!isWin) {
     player++;
     if (player > 2) {
         //to make sure is switching between 1 and 2
@@ -28,7 +29,7 @@ function displayChar(event) {
     }
     $("#y").text("player " + player + "'s turn");
     tie(isWin);
-  //}
+  }
   //     if(playing[0]==playing[0+1]&&playing[0+1]==playing[0+2]&&playing[0]!=null){
   // console.log('wwwwwwwwwwwwwwwwwwwwwwwwwwwww')
   //     }
@@ -82,7 +83,7 @@ function FindWinner(event) {
         playing[i] == playing[i + 6] &&
         playing[i] != null
       ) {
-        $("#print").text("player " + player + " is winner");
+        $("#y").html("<h3>player " + player + " is winner</h3>");
         $("div").off("click");
         return true;
       }
@@ -94,7 +95,7 @@ function FindWinner(event) {
     playing[0] != null
   ) {
     //diagnols
-    $("#print").text("player " + player + " is winner");
+    $("#y").html("<h3>player " + player + " is winner</h3>");
 
     $("div").off("click");
     return true;
@@ -104,7 +105,7 @@ function FindWinner(event) {
     playing[2] != null
   ) {
     //diagnols
-    $("#print").text("player " + player + " is winner");
+    $("#y").html("<h3>player " + player + " is winner</h3>");
     $("div").off("click");
     return true;
   }
@@ -121,7 +122,7 @@ function tie(isWin) {
     //to make sure all boxes is full
     if (isWin === false) {
       //Findwinner will return false if there is no winner
-      $("#print").html("<h3>Tie</h3>");
+      $("#y").html("<h3>Tie</h3>");
     }
   }
 }
