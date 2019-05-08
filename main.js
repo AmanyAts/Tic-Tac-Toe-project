@@ -92,10 +92,13 @@ function displayChar(event) {
     }
   }else{//computer playing
     
-    
+    player=1;
     $(event.target).html('<strong class="XandO">' + x + "</strong>");
     let index = $("div").index(this); //get div index to store the char in right postion
     playing[index] = x;
+    isWin = FindWinner(event);
+    
+    if(!isWin){
     let random;
     let emptyBoardSpaces = []
     playing.forEach( (arrayElement, index) => {
@@ -107,19 +110,13 @@ function displayChar(event) {
     random= Math.floor(Math.random() * emptyBoardSpaces.length);
     let computerChoice = emptyBoardSpaces[random]
     $("#"+computerChoice).html('<strong class="XandO">' + o + "</strong>");
-    // do{
-    //   random= Math.floor(Math.random() * 9);
-    //   console.log('random is ', random)
-    //   box = document.querySelectorAll(".box")[random]
-    //   console.log('box is ' + box)
-    //   positionValue = box.innerHTML
-    // } while(positionValue !=="");
-    // console.log('raa '+random);
-    // box.innerHTML='<strong class="XandO">' + o + "</strong>";
-
     playing[computerChoice] =o;
+    // player=$(event.target).text();
+    player='Computer';
     console.log("board after turn is ", playing);
     isWin = FindWinner(event);
+  }
+    
     if (!isWin) {
       tie(isWin);
     }

@@ -11,6 +11,7 @@ body{
     margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
+     
 }
 .board h3{
     font-size: 55px;
@@ -35,7 +36,7 @@ li{
     padding: 5px;
 }
 #rest{
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left:43%;
     color:black;
     background:whitesmoke;
@@ -50,7 +51,7 @@ li{
     color: white;
     width: 30%;
     height:33%;
-      
+     
 }
 .right{
     border-right: 0;
@@ -113,6 +114,7 @@ button{
 .players h3{
     margin-right: 20%;
     font-family: 'Gugi', cursive;
+    margin-top:0; 
     
 }
 .turn{
@@ -152,6 +154,7 @@ footer p{
 @media only screen and (max-width:900px){
     body{
       width: 100%;
+      
      }
      h1{
          margin-left: 70px;
