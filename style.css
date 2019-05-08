@@ -1,28 +1,53 @@
 
 body{
-  background: #FFFAFA;
+  /* background-image: url('chalkboard.png');
+  background-repeat: no-repeat;
+  background-size: 1345px 650px; */
+  
 }
 .board{
-    width: 500px;
-    height: 350px;
-    /* border: 2px solid black; */
-    margin-left: 30%;
+    width: 400px;
+    height: 280px;
+    margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3%;
-        
-    
-   
+}
+.board h3{
+    font-size: 55px;
+    font-family: 'Gugi', cursive;
+    color:gold;
     
 }
-button{
+header{
+
+
+}
+header nav{
+    display: block;
+    text-align: center;
+}
+
+li{
+    display:inline ;
+    border: 2px solid black;
+    margin:5px; 
+    font-size: 40px;
+    padding: 5px;
+}
+#rest{
     margin-top: 3%;
-    margin-left:45%;
+    margin-left:43%;
+    color:black;
+    background:whitesmoke;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    width: 150px;
 }
 .box{
     border-bottom: 2px solid palevioletred;
     border-right: 2px solid palevioletred;
-
+    color: white;
     width: 30%;
     height:33%;
       
@@ -35,46 +60,106 @@ button{
 }
 h1{
     color:black;
-    font-family:  cursive;
+    font-family:  'ZCOOL KuaiLe','cursive';
+    font-size:50px;
+    margin-left: 38%; 
 
-    font-size:45px;
-    margin-bottom: 5%;
-    margin-left: 38%;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 
-    /* text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkslateblue; */
+
+}
+main{
+    display: flex;
+    
+}
+.players{
+
+    margin-left:15%; 
+    display: flex;
+    justify-content: center;
+    
+}
+.select{
+     margin-top:10%; 
+    margin-left:15%; 
+}
+button{
+    background: #f44336;
+    color:white;
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    border: none;
+    cursor: pointer;
+}
+#com{
+    width: 105px;
+    height: 50px;
+    margin-bottom: 10px;  
+}
+#choice{
+    
+    display: block;
+    text-align: center;
+    margin: 3%;
+}
+#p1,#p2{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top:5%;
+    /* text-align: center; */
+   
+}
+
+.players h3{
+    margin-right: 20%;
+    font-family: 'Gugi', cursive;
+    
+}
+.turn{
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 
 }
 #y{
+    text-align: center;
     font-family: 'Gugi', cursive;
+    color:gold;
+
 
 }
 .XandO{
-    /* text-align: center; */
+
     font-size: 80px;
     display: flex;
     justify-content: center;
     font-family:"Walter Turncoat", cursive;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-color:white;
-    /* margin-left: 10%; */
+    
+
 }
 footer{
     background-color: brown;
-    height: 10%;
+    background-size: cover;
+    height: 30px;
     
 }
-@media only screen and (max-width: 600px) {
-    body {
-      width:100%;
+footer p{
+    text-align: center;
+    margin-top:20px;
+}
+.win{
+    color:gold;
+}
+@media only screen and (max-width:900px){
+    body{
+      width: 100%;
+     }
+     h1{
+         margin-left: 70px;
+     }
+  
+     .XandO{
+        font-size: 30px;
+     }
+   
     }
-  }
 
-/* div .cross::after{
-    content:"x";
-    color:lightblue;
-  }
-  .circle{
-    content:"o";
-    color:pink;
-  } */

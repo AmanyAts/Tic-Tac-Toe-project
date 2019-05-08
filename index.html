@@ -13,29 +13,63 @@
     </style>
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
+    <header>
+        
+        <h1>Tic Tac Toe</h1>
+        
+        <nav>
+
+                <!-- <button id='two' >two players</button> -->
+        </nav>
+         
+       
+           <section class='players'>   
+        <h3 id='player1'><span id="player-char">player 1/X</span> <span id='socre1'></span></h3>
+        
+                <h3 id='player2'><span id="player2-char">player 2/O</span><span id='socre2'></span></h3>
+            </section> 
+    </header>
+    
     <h3 id='y'></h3>
-    <!-- <button>two players</button>
-    <button>play with computer</button> -->
+
     <!-- <h3 id='print'></h3> -->
+    <main>
+
+
+        <section class='select'>
+                <button id='com' >play with computer</button> 
+<br>
+                <button id="p1">X</button>
+           
+            <button id="p2">O</button>
+               
+                
+
+            
+
+        </section>
     <section class='board'>
       
+       <div class="box" id='0'></div>
        <div class="box" id='1'></div>
-       <div class="box" id='2'></div>
-        <div class="box right" id='3'></div>
+        <div class="box right" id='2'></div>
+        <div class='box' id='3'></div>
         <div class='box' id='4'></div>
-        <div class='box' id='5'></div>
-        <div class='box right' id='6'></div>
+        <div class='box right' id='5'></div>
+        <div class='box bottom' id='6'></div>
         <div class='box bottom' id='7'></div>
-        <div class='box bottom' id='8'></div>
-        <div class='box right bottom' id='9'></div>
+        <div class='box right bottom' id='8'></div>
     
     </section>
-    
-    <button>rest game</button>
-    <footer>
+    <div id='choice'>
+            
+        </div>
+</main>
+<button id='rest'>Play again</button>
+    <!-- <footer>
         <p>made by Amany 2019</p>
-    </footer>
+    </footer> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="main.js"></script>
 </body>
