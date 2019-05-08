@@ -138,15 +138,10 @@ button{
     
 
 }
-footer{
-    background-color: brown;
-    background-size: cover;
-    height: 30px;
-    
-}
 footer p{
     text-align: center;
-    margin-top:20px;
+    margin-top:45px;
+    color:white;
 }
 .win{
     color:gold;

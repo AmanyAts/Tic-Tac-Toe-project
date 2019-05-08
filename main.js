@@ -138,9 +138,9 @@ function FindWinner(event) {
         
           console.log("winner")
           swal("player " + player + " is winner");
-          // $('#'+i).toggleClass('win');
-          // $('#'+(i+1)).css('color','gold');
-          // $('#'+(i+2)).css('color','gold');
+           $('#'+i).addClass('win');
+           $('#'+(i+1)).addClass('win');
+          $('#'+(i+2)).addClass('win');
           $("div").off("click");
            return true;
       }
@@ -149,6 +149,9 @@ function FindWinner(event) {
       //column cases
       if (playing[i] !== "" && playing[i] == playing[i + 3] &&playing[i] == playing[i + 6] &&playing[i] != null) {
         swal("player " + player + " is winner");
+        $('#'+i).addClass('win');
+           $('#'+(i+3)).addClass('win');
+          $('#'+(i+6)).addClass('win');
         $("div").off("click");
         return true;
       }
@@ -157,6 +160,9 @@ function FindWinner(event) {
   if (playing[0] !== "" && playing[0] == playing[4] &&playing[0] == playing[8] &&playing[0] != null) {
     //diagnols
     swal("player " + player + " is winner");
+    $('#0').addClass('win');
+    $('#4').addClass('win');
+   $('#8').addClass('win');
 
 
     $("div").off("click");
@@ -164,7 +170,9 @@ function FindWinner(event) {
   } else if ( playing[2] !== "" && playing[2] == playing[4] &&playing[2] == playing[6] &&playing[2] != null) {
     //diagnols
     swal("player " + player + " is winner");
-
+    $('#2').addClass('win');
+    $('#4').addClass('win');
+   $('#6').addClass('win');
     $("div").off("click");
     return true;
   }
@@ -207,6 +215,7 @@ function restGame() {
   $('#p1').on('click',selecting);
   $('#p2').off('click');
   $('#p2').on('click',selecting);
+  $('.box').removeClass('win');
   // location.reload();
 }
 
