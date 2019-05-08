@@ -40,7 +40,7 @@ function selecting(){
 function displayChar(event) {
   $('#p1').off('click');
   $('#p2').off('click');
-  if(!isCom){
+  if(!isCom){//if playing with computer is not clicked
   
     if (player == 1) {
       //draw x if player is 1
@@ -83,14 +83,15 @@ function displayChar(event) {
     }
 
     if (!isWin) {
-      player++;
+      player++;//to move to the next player
       if (player > 2) {
           //to make sure is switching between 1 and 2
           player = 1;
       }
       tie(isWin);
     }
-  }else{//computer playing
+  }else{
+    //computer playing
     
     player=1;
     $(event.target).html('<strong class="XandO">' + x + "</strong>");
@@ -100,18 +101,17 @@ function displayChar(event) {
     
     if(!isWin){
     let random;
-    let emptyBoardSpaces = []
+    let emptyBoardSpaces = []//4
     playing.forEach( (arrayElement, index) => {
-      if (arrayElement === "") {
-        emptyBoardSpaces.push(index)
+      if (arrayElement === "") {//it it empty add index 
+        emptyBoardSpaces.push(index)// it will add all empty indexes
       }
     })
     // emptyBoardSpaces [1,2,5,8]
-    random= Math.floor(Math.random() * emptyBoardSpaces.length);
-    let computerChoice = emptyBoardSpaces[random]
+    random= Math.floor(Math.random() * emptyBoardSpaces.length);//4
+    let computerChoice = emptyBoardSpaces[random]//index number from empty array
     $("#"+computerChoice).html('<strong class="XandO">' + o + "</strong>");
     playing[computerChoice] =o;
-    // player=$(event.target).text();
     player='Computer';
     console.log("board after turn is ", playing);
     isWin = FindWinner(event);
@@ -196,6 +196,7 @@ function tie(isWin) {
 }
 
 function restGame() {
+  //everything will go back as first
   $("#y").text("");
   $('.box').text('');
   playing=[
@@ -220,8 +221,8 @@ function restGame() {
 }
 
 // start the game
-$('#p1').on('click', selecting);
-$('#p2').on('click', selecting);
+$('#p1').on('click', selecting);//if selected on x
+$('#p2').on('click', selecting);//if selected on o
 $("#rest").on("click", restGame);
 $(".box").on("click", displayChar);
 $('#com').on("click", withComputer);
